@@ -1,15 +1,17 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
-double calcola_area(int base,int altezza) {
-	return base*altezza;
+double multiplication (double base,double height) {
+	return base*height;
 }
 int main(){
-	int a;
-	int b;
+	double a;
+	double b;
+	cout <<"Insert first number :";
 	cin>> a;
+	cout <<"Insert second number :";
 	cin>> b;
-	cout<<calcola_area(a,b);
+	cout<<multiplication(a,b);
 	system("pause");
 	return 0;
 }
