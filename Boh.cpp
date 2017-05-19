@@ -24,15 +24,21 @@ struct People {
 int main() {
 	int a;
 	int i;
-	double avg = 0;
+	double max = 0;
+	double min = 9541651563;
 	cout << "Inserire numero di persone(massimo 70): ";
 	cin >> a;
 	for (i = 0; i < a; i++) {
 		people[i].Name = name();
 		people[i].Cm = cm();
-		avg += people[i].Cm;
+			if (people[i].Cm > max) {
+				max = people[i].Cm;
+		}
+			if (people[i].Cm < min) {
+				min = people[i].Cm;
+			}
 	}
-	cout << avg / a;
+	cout << "il valore maggiore e' "<< max << " e il valore minore e' "<< min <<endl;
 	system("pause");
 	return 0;
 }
